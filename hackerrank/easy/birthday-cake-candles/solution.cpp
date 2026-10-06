@@ -1,34 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void miniMaxSum(vector<long long> arr) {
-    long long total = 0;
+int birthdayCakeCandles(vector<int> candles) {
+    int maxHeight = *max_element(candles.begin(), candles.end());
+    int count = 0;
 
-    for (long long x : arr) {
-        total += x;
+    for (int height : candles) {
+        if (height == maxHeight) {
+            count++;
+        }
     }
 
-    long long minSum = total - arr[4];
-    long long maxSum = total - arr[0];
-
-    for (int i = 0; i < 5; i++) {
-        long long sum = total - arr[i];
-
-        minSum = min(minSum, sum);
-        maxSum = max(maxSum, sum);
-    }
-
-    cout << minSum << " " << maxSum << endl;
+    return count;
 }
 
 int main() {
-    vector<long long> arr(5);
+    int n;
+    cin >> n;
 
-    for (int i = 0; i < 5; i++) {
-        cin >> arr[i];
+    vector<int> candles(n);
+
+    for (int i = 0; i < n; i++) {
+        cin >> candles[i];
     }
 
-    miniMaxSum(arr);
+    int result = birthdayCakeCandles(candles);
+
+    cout << result << endl;
 
     return 0;
 }
