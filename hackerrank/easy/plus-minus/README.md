@@ -1,4 +1,4 @@
-# A Very Big Sum
+# Plus Minus
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
@@ -43,35 +43,46 @@ $-100 \le arr[i] \le 100$
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T16:02:11.900Z  
+**Submitted:** 2026-10-06T16:02:50.587Z  
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-long long aVeryBigSum(vector<long long> ar) {
-    long long sum = 0;
+void plusMinus(vector<int> arr) {
+    int positive = 0;
+    int negative = 0;
+    int zero = 0;
 
-    for (long long x : ar) {
-        sum += x;
+    for (int x : arr) {
+        if (x > 0)
+            positive++;
+        else if (x < 0)
+            negative++;
+        else
+            zero++;
     }
 
-    return sum;
+    int n = arr.size();
+
+    cout << fixed << setprecision(6);
+
+    cout << (double)positive / n << endl;
+    cout << (double)negative / n << endl;
+    cout << (double)zero / n << endl;
 }
 
 int main() {
     int n;
     cin >> n;
 
-    vector<long long> ar(n);
+    vector<int> arr(n);
 
     for (int i = 0; i < n; i++) {
-        cin >> ar[i];
+        cin >> arr[i];
     }
 
-    long long result = aVeryBigSum(ar);
-
-    cout << result << endl;
+    plusMinus(arr);
 
     return 0;
 }
