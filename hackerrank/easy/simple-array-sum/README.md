@@ -1,4 +1,4 @@
-# Solve Me First
+# Simple Array Sum
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
@@ -34,21 +34,33 @@ The second line contains $n$ space-separated integers representing the array's e
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T16:00:28.530Z  
+**Submitted:** 2026-10-06T16:01:15.665Z  
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-int solveMeFirst(int a, int b) {
-    return a + b;
+int simpleArraySum(vector<int> ar) {
+    int sum = 0;
+
+    for (int x : ar) {
+        sum += x;
+    }
+
+    return sum;
 }
 
 int main() {
-    int a, b;
-    cin >> a >> b;
+    int n;
+    cin >> n;
 
-    int result = solveMeFirst(a, b);
+    vector<int> ar(n);
+
+    for (int i = 0; i < n; i++) {
+        cin >> ar[i];
+    }
+
+    int result = simpleArraySum(ar);
 
     cout << result << endl;
 
