@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int simpleArraySum(vector<int> ar) {
-    int sum = 0;
+long long aVeryBigSum(vector<long long> ar) {
+    long long sum = 0;
 
-    for (int x : ar) {
+    for (long long x : ar) {
         sum += x;
     }
 
@@ -15,13 +15,13 @@ int main() {
     int n;
     cin >> n;
 
-    vector<int> ar(n);
+    vector<long long> ar(n);
 
     for (int i = 0; i < n; i++) {
         cin >> ar[i];
     }
 
-    int result = simpleArraySum(ar);
+    long long result = aVeryBigSum(ar);
 
     cout << result << endl;
 
