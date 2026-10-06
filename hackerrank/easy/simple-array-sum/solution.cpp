@@ -1,15 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int solveMeFirst(int a, int b) {
-    return a + b;
+int simpleArraySum(vector<int> ar) {
+    int sum = 0;
+
+    for (int x : ar) {
+        sum += x;
+    }
+
+    return sum;
 }
 
 int main() {
-    int a, b;
-    cin >> a >> b;
+    int n;
+    cin >> n;
 
-    int result = solveMeFirst(a, b);
+    vector<int> ar(n);
+
+    for (int i = 0; i < n; i++) {
+        cin >> ar[i];
+    }
+
+    int result = simpleArraySum(ar);
 
     cout << result << endl;
 
