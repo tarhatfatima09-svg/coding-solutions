@@ -1,4 +1,4 @@
-# Birthday Cake Candles
+# Time Conversion
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
@@ -45,38 +45,38 @@ A single string $s$ that represents a time in $12$-hour clock format (i.e.: $\te
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T16:05:52.755Z  
+**Submitted:** 2026-10-06T16:06:24.504Z  
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-int birthdayCakeCandles(vector<int> candles) {
-    int maxHeight = *max_element(candles.begin(), candles.end());
-    int count = 0;
+string timeConversion(string s) {
+    int hour = stoi(s.substr(0, 2));
 
-    for (int height : candles) {
-        if (height == maxHeight) {
-            count++;
-        }
+    if (s.substr(8, 2) == "AM") {
+        if (hour == 12)
+            hour = 0;
+    } else {
+        if (hour != 12)
+            hour += 12;
     }
 
-    return count;
+    string result = to_string(hour);
+
+    if (hour < 10)
+        result = "0" + result;
+
+    result += s.substr(2, 6);
+
+    return result;
 }
 
 int main() {
-    int n;
-    cin >> n;
+    string s;
+    cin >> s;
 
-    vector<int> candles(n);
-
-    for (int i = 0; i < n; i++) {
-        cin >> candles[i];
-    }
-
-    int result = birthdayCakeCandles(candles);
-
-    cout << result << endl;
+    cout << timeConversion(s) << endl;
 
     return 0;
 }
