@@ -1,4 +1,4 @@
-# Mini-Max Sum
+# Staircase
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
@@ -40,40 +40,34 @@ $1 \le arr[i] \le 10^9$
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T16:04:54.054Z  
+**Submitted:** 2026-10-06T16:04:11.885Z  
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-void miniMaxSum(vector<long long> arr) {
-    long long total = 0;
+void staircase(int n) {
+    for (int i = 1; i <= n; i++) {
 
-    for (long long x : arr) {
-        total += x;
+        // Print spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " ";
+        }
+
+        // Print #
+        for (int j = 1; j <= i; j++) {
+            cout << "#";
+        }
+
+        cout << endl;
     }
-
-    long long minSum = total - arr[4];
-    long long maxSum = total - arr[0];
-
-    for (int i = 0; i < 5; i++) {
-        long long sum = total - arr[i];
-
-        minSum = min(minSum, sum);
-        maxSum = max(maxSum, sum);
-    }
-
-    cout << minSum << " " << maxSum << endl;
 }
 
 int main() {
-    vector<long long> arr(5);
+    int n;
+    cin >> n;
 
-    for (int i = 0; i < 5; i++) {
-        cin >> arr[i];
-    }
-
-    miniMaxSum(arr);
+    staircase(n);
 
     return 0;
 }
