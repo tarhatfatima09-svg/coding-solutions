@@ -1,4 +1,4 @@
-# Simple Array Sum
+# A Very Big Sum
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
@@ -63,16 +63,16 @@ When we add several integer values, the resulting sum might exceed the above ran
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T16:01:19.376Z  
+**Submitted:** 2026-10-06T16:02:04.693Z  
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-int simpleArraySum(vector<int> ar) {
-    int sum = 0;
+long long aVeryBigSum(vector<long long> ar) {
+    long long sum = 0;
 
-    for (int x : ar) {
+    for (long long x : ar) {
         sum += x;
     }
 
@@ -83,13 +83,13 @@ int main() {
     int n;
     cin >> n;
 
-    vector<int> ar(n);
+    vector<long long> ar(n);
 
     for (int i = 0; i < n; i++) {
         cin >> ar[i];
     }
 
-    int result = simpleArraySum(ar);
+    long long result = aVeryBigSum(ar);
 
     cout << result << endl;
 
