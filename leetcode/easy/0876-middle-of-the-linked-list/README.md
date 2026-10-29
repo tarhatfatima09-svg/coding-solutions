@@ -39,8 +39,8 @@ Explanation: Since the list has two middle nodes with values 3 and 4, we return 
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 10 MB (beats 64.19%)  
-**Submitted:** 2026-10-12T17:20:35.958Z  
+**Memory:** 10.1 MB (beats 26.11%)  
+**Submitted:** 2026-10-29T13:38:50.910Z  
 
 ```cpp
 /**
