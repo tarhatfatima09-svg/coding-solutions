@@ -39,8 +39,8 @@ Explanation: Since the list has two middle nodes with values 3 and 4, we return 
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 10.1 MB (beats 26.11%)  
-**Submitted:** 2026-10-29T13:38:50.910Z  
+**Memory:** 9.8 MB (beats 89.82%)  
+**Submitted:** 2026-10-29T13:52:30.190Z  
 
 ```cpp
 /**
@@ -56,18 +56,15 @@ Explanation: Since the list has two middle nodes with values 3 and 4, we return 
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
-        
-        ListNode* slow = head;
-        ListNode* fast = head;
-
-        while (fast != nullptr && fast->next != nullptr) {
-            slow = slow->next;
-            fast = fast->next->next;
+        ListNode*slow=head;
+        ListNode*fast=head;
+        while(fast!=NULL&& fast->next!=NULL){
+            slow=slow->next;
+            fast=fast->next->next;
         }
-
         return slow;
     }
-};
+        };
 ```
 
 ---
