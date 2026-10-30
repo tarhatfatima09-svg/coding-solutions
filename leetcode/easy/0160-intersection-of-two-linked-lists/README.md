@@ -77,9 +77,9 @@ Explanation: The two lists do not intersect, so return null.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 61 ms (beats 30.26%)  
-**Memory:** 23.8 MB (beats 97.42%)  
-**Submitted:** 2026-10-30T13:12:11.965Z  
+**Runtime:** 55 ms (beats 63.81%)  
+**Memory:** 23.9 MB (beats 52.04%)  
+**Submitted:** 2026-10-30T13:12:39.654Z  
 
 ```cpp
 /**
