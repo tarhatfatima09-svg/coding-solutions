@@ -36,8 +36,8 @@ Output: [1,2,3]
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 16 MB (beats 88.02%)  
-**Submitted:** 2026-10-31T15:32:08.978Z  
+**Memory:** 16 MB (beats 87.85%)  
+**Submitted:** 2026-11-01T15:43:50.420Z  
 
 ```cpp
 /**
