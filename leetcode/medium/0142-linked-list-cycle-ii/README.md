@@ -54,9 +54,9 @@ Explanation: There is no cycle in the linked list.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 7 ms (beats 67.74%)  
-**Memory:** 11.5 MB (beats 11.05%)  
-**Submitted:** 2026-11-07T13:52:50.743Z  
+**Runtime:** 5 ms (beats 86.46%)  
+**Memory:** 11.2 MB (beats 84.51%)  
+**Submitted:** 2026-11-07T13:53:02.752Z  
 
 ```cpp
 /**
